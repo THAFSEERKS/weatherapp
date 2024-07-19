@@ -1,15 +1,30 @@
-.app {
+/* Ensure the background color covers the entire viewport */
+html, body {
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
-  display: grid;
+  background-color: #062336;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
   background-color: #062336;
 }
 
-/* Ensure that the weather container and its content are centered */
 .weather-container {
-  display: grid;
-  place-items: center;
-  padding: 20px; /* Ensure content doesn't touch the edges */
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
 }
 
 .weather {
@@ -20,8 +35,8 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 400px; /* Limit the width to prevent it from stretching too much on larger screens */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for better visibility */
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .search-bar {
@@ -96,38 +111,34 @@
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-  .app {
-    padding: 20px; /* Add padding to ensure content doesn't touch the edges */
-  }
-  
   .temperature {
     font-size: 60px;
   }
-  
+
   .location {
     font-size: 30px;
   }
-  
+
   .weather-data {
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
-  
+
   .weather-data .col {
     justify-content: center;
     font-size: 18px;
   }
-  
+
   .weather-data .col span {
     font-size: 14px;
   }
-  
+
   .search-bar input {
     height: 40px;
     font-size: 16px;
   }
-  
+
   .search-bar img {
     width: 40px;
     padding: 10px;
@@ -135,31 +146,27 @@
 }
 
 @media (max-width: 480px) {
-  .app {
-    padding: 10px; /* Ensure adequate padding on smaller screens */
-  }
-  
   .temperature {
     font-size: 50px;
   }
-  
+
   .location {
     font-size: 25px;
   }
-  
+
   .weather-data .col {
     font-size: 16px;
   }
-  
+
   .weather-data .col span {
     font-size: 12px;
   }
-  
+
   .search-bar input {
     height: 35px;
     font-size: 14px;
   }
-  
+
   .search-bar img {
     width: 35px;
     padding: 8px;
