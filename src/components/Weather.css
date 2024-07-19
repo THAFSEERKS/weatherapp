@@ -1,8 +1,15 @@
+.app {
+  min-height: 100vh;
+  display: grid;
+  background-color: #062336;
+}
+
+/* Ensure that the weather container and its content are centered */
 .weather-container {
   display: grid;
-  height: 100vh;
   place-items: center;
-  padding: 20px; /* Add padding to ensure content doesn't touch the edges */
+  padding: 20px; /* Ensure content doesn't touch the edges */
+  height: 100%;
 }
 
 .weather {
@@ -89,6 +96,10 @@
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
+  .app {
+    padding: 20px; /* Add padding to ensure content doesn't touch the edges */
+  }
+  
   .temperature {
     font-size: 60px;
   }
@@ -124,6 +135,10 @@
 }
 
 @media (max-width: 480px) {
+  .app {
+    padding: 10px; /* Ensure adequate padding on smaller screens */
+  }
+  
   .temperature {
     font-size: 50px;
   }
